@@ -1,4 +1,6 @@
-# Extas mostrados durante as aulas
+# Extras mostrados durante as aulas
+
+## Aula 02 HTML
 
 #### links
 
