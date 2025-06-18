@@ -15,3 +15,6 @@ https://www.berkshirehathaway.com/
 https://javascript.info/
 
 https://pngimg.com/image/110766
+
+Link para feedbacks:
+https://dsro75f2mx7.typeform.com/to/qzaTvzhc#codturma=0062_TEC_Grupo Boticário_01
