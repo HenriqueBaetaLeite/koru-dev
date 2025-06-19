@@ -20,3 +20,9 @@ https://pngimg.com/image/20715
 
 Link para feedbacks:
 https://dsro75f2mx7.typeform.com/to/qzaTvzhc#codturma=0062_TEC_Grupo Boticário_01
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child
+
+https://stackoverflow.com/questions
+
+https://css-tricks.com/useful-nth-child-recipies/
