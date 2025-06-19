@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meu site pessoal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      h1 {
+        border: 2px dotted blue;
+      }
+    </style>
   </head>
-  <body>
-    <!-- e aqui eu escrevo o comentário que eu quiser -->
+  
+    <body class="corpo">
+    <!-- aqui eu escrevo o comentário que eu quiser -->
 
-    <h1>Boas vindas à minha página pessoal.</h1>
+    <h1 class="titulo-koru">Boas vindas à minha página pessoal.</h1>
 
     <p>Olá, meu nome é Henrique e sou professor de programação.</p>
 
     <!-- Menu de navegação -->
 
-    <h2>Menu</h2>
+    <h2 class="titulo-koru koru abacate">Menu</h2>
     <ul>
       <li><a href="contato.html">Contato</a></li>
 
-      <li><a href="foto.html">Galeria de fotos</a></li>
+      <li id="list"><a href="foto.html">Galeria de fotos</a></li>
 
       <li><a href="projetos.html">Projetos</a></li>
     </ul>
 
-
     <!-- Lista de interesses -->
 
-    <h4>Interesses</h4>
+    <h1>Interesses</h1>
 
-    <ol type="I" start="100">
-      <li>Programação</li>
+    <ol>
+      <li style="color: blue;">Programação</li>
       <li>Música</li>
       <li>Educação</li>
+      <li>Leitura</li>
     </ol>
-
 
   </body>
 </html>
