@@ -1,10 +1,16 @@
 # Extras mostrados durante as aulas
 
-## Aula 04 HTML
+## Aula 06 HTML
 
 #### links
 
 https://dev.to/shrihari/how-to-test-open-graph-meta-tags-locally--4981
+
+https://developers.facebook.com/tools/debug/
+
+https://www.linkedin.com/post-inspector/
+
+https://favicon.io/
 
 https://developer.mozilla.org/en-US/
 
