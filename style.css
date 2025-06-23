@@ -1,9 +1,3 @@
-p {
-  color: red;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 900;
-}
-
 .titulo-koru {
   color:blue;
 }
@@ -13,17 +7,10 @@ p {
 }
 
 #list {
-  border: 4px double green;
-}
-
-[type="I"], [width="150"] {
-  border: 5px solid green;
+  width: fit-content;
+  border: 2px solid green;
 }
 
 li a:hover {
   font-size: 20px;
-}
-
-li:nth-child(-n + 3) {
-  color: red;
 }
