@@ -8,8 +8,6 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 https://flexboxfroggy.com/
 
-https://favicon.io/
-
 https://developer.mozilla.org/en-US/docs/Web/CSS
 
 Link para feedbacks:
