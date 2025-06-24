@@ -1,16 +1,43 @@
-.titulo-koru {
-  color:blue;
+main {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.koru {
-  color:red;
+h4 {
+  border: 2px solid blue;
 }
 
-#list {
-  width: fit-content;
+span {
+  border: 2px solid yellow;
+  order: -90;
+}
+
+p {
   border: 2px solid green;
 }
 
-li a:hover {
-  font-size: 20px;
+section {
+  border: 2px solid black;
+}
+
+ul {
+  border: 2px solid black;
+}
+
+li {
+    border: 2px solid black;
+}
+
+a {
+    border: 2px solid black;
+}
+
+button {
+  height: 30px;
+  width: 200px;
 }

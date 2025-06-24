@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo CSS Grid</title>
+    <style>
+      /* Estilos básicos para visualização */
+body {
+    font-family: sans-serif;
+    margin: 0; /* Remover margem padrão do body */
+    background-color: #f0f0f0;
+}
+
+.grid-container {
+    border: 2px solid #333;
+    background-color: #fff;
+    padding: 10px; /* Adicionar um pequeno padding */
+
+    /* --- CONFIGURAÇÃO DO GRID (Mobile First - Layout Padrão) --- */
+
+    /* 1. Ativa o Grid Layout */
+    display: grid;
+
+    /* 2. Define UMA ÚNICA coluna por padrão (layout empilhado) */
+    grid-template-columns: 1fr;
+
+    /* 3. Define as linhas para o layout empilhado */
+    /* Alturas automáticas podem funcionar bem aqui, mas vamos definir áreas */
+    grid-template-rows: auto auto 1fr auto; /* Header, Sidebar, Main (flexível), Footer */
+
+    /* 4. Define as áreas nomeadas para o layout de coluna única */
+    grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "footer";
+
+    /* 5. Espaçamento (pode ser um pouco menor no mobile) */
+    gap: 10px;
+
+    /* Para garantir que o layout ocupe a altura mínima da tela */
+    min-height: calc(100vh - 4px - 20px); /* 100% da altura da viewport menos bordas e padding */
+    /* max-width e margin auto removidos do padrão para ocupar tela inteira no mobile */
+}
+
+.grid-item {
+    /* Estilos para visualizar os itens (iguais aos anteriores) */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Cores (iguais às anteriores) */
+.header { background-color: #a7c7e7; }
+.sidebar { background-color: #f1cbff; }
+.main { background-color: #c1f0c1; }
+.footer { background-color: #ffe4b5; }
+
+
+/* --- POSICIONANDO OS ITENS (Mobile First) --- */
+/* As atribuições de área funcionam para AMBOS os layouts,
+   pois os nomes são os mesmos, apenas a definição das áreas muda */
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+
+
+/* --- MEDIA QUERY PARA TELAS MAIORES (Tablet/Desktop) --- */
+
+@media (min-width: 768px) { /* Aplica estas regras quando a largura da tela for 768px OU MAIOR */
+
+    .grid-container {
+        /* Reajusta o container para telas maiores */
+        max-width: 900px; /* Define uma largura máxima */
+        margin: 20px auto; /* Centraliza na tela com margens */
+        padding: 15px; /* Aumenta um pouco o padding */
+        gap: 15px; /* Aumenta o espaçamento */
+
+        /* 2. Redefine as COLUNAS para o layout de 2 colunas */
+        grid-template-columns: 1fr 3fr; /* Sidebar (1fr), Main (3fr) */
+
+        /* 3. Redefine as LINHAS para o layout de 2 colunas */
+        grid-template-rows: auto 1fr auto; /* Header, Conteúdo (flexível), Footer */
+
+        /* 4. Redefine as ÁREAS para o layout de 2 colunas */
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
+
+        min-height: auto; /* Remove a altura mínima de 100vh */
+    }
+
+    /* (Opcional) Ajustes nos itens para telas maiores, se necessário */
+    /* .main { min-height: 300px; } */
+}
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item header">Cabeçalho</div>
+      <div class="grid-item sidebar">Barra Lateral</div>
+      <div class="grid-item main">Conteúdo Principal</div>
+      <div class="grid-item footer">Rodapé</div>
+    </div>
+  </body>
+ 
+</html>

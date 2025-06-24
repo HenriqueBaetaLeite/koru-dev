@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo CSS Grid</title>
+    <style>
+      /* Estilos básicos para visualização */
+      body {
+        font-family: sans-serif;
+        margin: 20px;
+        background-color: #f0f0f0; /* Cor de fundo para a página */
+      }
+  
+      .grid-container {
+        max-width: 900px; /* Largura máxima para melhor visualização */
+        margin: 0 auto; /* Centralizar o container */
+        border: 2px solid #333; /* Borda para ver o container */
+        background-color: #fff; /* Fundo branco para o container */
+  
+        /* --- A MÁGICA DO GRID COMEÇA AQUI --- */
+  
+        /* 1. Ativa o Grid Layout no container */
+        display: grid;
+  
+        /* 2. Define as colunas:
+           - A primeira coluna (sidebar) ocupa 1 fração do espaço.
+           - A segunda coluna (main) ocupa 3 frações do espaço. */
+        grid-template-columns: 1fr 3fr;
+  
+        /* 3. Define as linhas:
+           - A primeira linha (header) tem altura automática (baseada no conteúdo).
+           - A segunda linha (sidebar/main) ocupa 1 fração do espaço restante (flexível).
+           - A terceira linha (footer) tem altura automática. */
+        grid-template-rows: auto 1fr auto;
+  
+        /* 4. Define as áreas nomeadas para facilitar o posicionamento */
+        grid-template-areas:
+          'header header' /* Header ocupa as duas colunas da primeira linha */
+          'sidebar main' /* Sidebar na primeira coluna, Main na segunda (segunda linha) */
+          'footer footer'; /* Footer ocupa as duas colunas da terceira linha */
+  
+        /* 5. Define o espaçamento entre as linhas e colunas */
+        gap: 15px; /* 15px de espaço entre todas as células */
+  
+        /* --- FIM DA CONFIGURAÇÃO DO CONTAINER --- */
+      }
+  
+      .grid-item {
+        /* Estilos para visualizar os itens */
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #e0e0e0;
+        text-align: center;
+        font-size: 1.1em;
+        font-weight: bold;
+      }
+  
+      /* --- POSICIONANDO OS ITENS USANDO AS ÁREAS NOMEADAS --- */
+  
+      .header {
+        grid-area: header; /* Coloca este item na área 'header' */
+        background-color: #a7c7e7; /* Azul claro */
+      }
+  
+      .sidebar {
+        grid-area: sidebar; /* Coloca este item na área 'sidebar' */
+        background-color: #f1cbff; /* Lilás */
+      }
+  
+      .main {
+        grid-area: main; /* Coloca este item na área 'main' */
+        background-color: #c1f0c1; /* Verde claro */
+        min-height: 200px; /* Altura mínima para garantir visibilidade */
+      }
+  
+      .footer {
+        grid-area: footer; /* Coloca este item na área 'footer' */
+        background-color: #ffe4b5; /* Laranja claro */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item header">Cabeçalho</div>
+      <div class="grid-item sidebar">Barra Lateral</div>
+      <div class="grid-item main">Conteúdo Principal</div>
+      <div class="grid-item footer">Rodapé</div>
+    </div>
+  </body>
+ 
+</html>
