@@ -14,5 +14,9 @@ https://favicon.io/
 
 https://developer.mozilla.org/en-US/docs/Web/HTML
 
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table
+
 Link para feedbacks:
 https://dsro75f2mx7.typeform.com/to/qzaTvzhc#codturma=0062_TEC_Grupo Boticário_01
