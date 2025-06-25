@@ -1,11 +1,7 @@
 main {
   border: 2px solid red;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 
 h4 {
@@ -39,5 +35,5 @@ a {
 
 button {
   height: 30px;
-  width: 200px;
+  /* width: 200px; */
 }

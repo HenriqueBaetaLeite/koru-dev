@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exemplo CSS Grid</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <style>
       /* Estilos básicos para visualização */
 body {
-    font-family: sans-serif;
+    font-family: "Ubuntu";
     margin: 0; /* Remover margem padrão do body */
     background-color: #f0f0f0;
 }
@@ -37,7 +39,7 @@ body {
         "footer";
 
     /* 5. Espaçamento (pode ser um pouco menor no mobile) */
-    gap: 10px;
+    gap: 7px;
 
     /* Para garantir que o layout ocupe a altura mínima da tela */
     min-height: calc(100vh - 4px - 20px); /* 100% da altura da viewport menos bordas e padding */
@@ -98,6 +100,36 @@ body {
 
     /* (Opcional) Ajustes nos itens para telas maiores, se necessário */
     /* .main { min-height: 300px; } */
+
+  }
+
+  @media (min-width: 900px) {
+     .grid-container {
+        /* Reajusta o container para telas maiores */
+        max-width: 900px; /* Define uma largura máxima */
+        margin: 20px auto; /* Centraliza na tela com margens */
+        padding: 15px; /* Aumenta um pouco o padding */
+        gap: 15px; /* Aumenta o espaçamento */
+
+        /* 2. Redefine as COLUNAS para o layout de 2 colunas */
+        grid-template-columns: 1fr 3fr; /* Sidebar (1fr), Main (3fr) */
+
+        /* 3. Redefine as LINHAS para o layout de 2 colunas */
+        grid-template-rows: auto 1fr auto; /* Header, Conteúdo (flexível), Footer */
+
+        /* 4. Redefine as ÁREAS para o layout de 2 colunas */
+        grid-template-areas:
+            "header s"
+            "sidebar main"
+            "footer s";
+
+        min-height: auto; /* Remove a altura mínima de 100vh */
+        
+  }
+
+  .header {
+    background: red;
+  }
 }
     </style>
   </head>

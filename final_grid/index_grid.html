@@ -26,22 +26,23 @@
         /* 2. Define as colunas:
            - A primeira coluna (sidebar) ocupa 1 fração do espaço.
            - A segunda coluna (main) ocupa 3 frações do espaço. */
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr 1fr;
   
         /* 3. Define as linhas:
            - A primeira linha (header) tem altura automática (baseada no conteúdo).
            - A segunda linha (sidebar/main) ocupa 1 fração do espaço restante (flexível).
            - A terceira linha (footer) tem altura automática. */
-        grid-template-rows: auto 1fr auto;
+        grid-template-rows: auto 1fr auto auto;
   
         /* 4. Define as áreas nomeadas para facilitar o posicionamento */
         grid-template-areas:
-          'header header' /* Header ocupa as duas colunas da primeira linha */
-          'sidebar main' /* Sidebar na primeira coluna, Main na segunda (segunda linha) */
-          'footer footer'; /* Footer ocupa as duas colunas da terceira linha */
+          'cabeca cabeca cabeca' /* Header ocupa as duas colunas da primeira linha */
+          'lateral main anuncio' /* Sidebar na primeira coluna, Main na segunda (segunda linha) */
+          'sub sub sub'
+          'rodape rodape rodape'; /* Footer ocupa as duas colunas da terceira linha */
   
         /* 5. Define o espaçamento entre as linhas e colunas */
-        gap: 15px; /* 15px de espaço entre todas as células */
+        gap: 10px; /* 15px de espaço entre todas as células */
   
         /* --- FIM DA CONFIGURAÇÃO DO CONTAINER --- */
       }
@@ -59,12 +60,12 @@
       /* --- POSICIONANDO OS ITENS USANDO AS ÁREAS NOMEADAS --- */
   
       .header {
-        grid-area: header; /* Coloca este item na área 'header' */
+        grid-area: cabeca; /* Coloca este item na área 'header' */
         background-color: #a7c7e7; /* Azul claro */
       }
   
       .sidebar {
-        grid-area: sidebar; /* Coloca este item na área 'sidebar' */
+        grid-area: lateral; /* Coloca este item na área 'sidebar' */
         background-color: #f1cbff; /* Lilás */
       }
   
@@ -75,9 +76,20 @@
       }
   
       .footer {
-        grid-area: footer; /* Coloca este item na área 'footer' */
+        grid-area: rodape; /* Coloca este item na área 'footer' */
         background-color: #ffe4b5; /* Laranja claro */
       }
+
+      .anuncio {
+        grid-area: anuncio;
+        background-color: #c7e219;
+      }
+
+      .sub-main {
+        grid-area: sub;
+        background-color: #8164f5;
+      }
+
     </style>
   </head>
   <body>
@@ -85,6 +97,8 @@
       <div class="grid-item header">Cabeçalho</div>
       <div class="grid-item sidebar">Barra Lateral</div>
       <div class="grid-item main">Conteúdo Principal</div>
+      <div class="grid-item anuncio">Anuncie aqui</div>
+      <div class="grid-item sub-main">Sub Main</div>
       <div class="grid-item footer">Rodapé</div>
     </div>
   </body>
