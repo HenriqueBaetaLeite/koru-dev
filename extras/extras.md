@@ -1,22 +1,22 @@
 # Extras mostrados durante as aulas
 
-## Aula 06 HTML
+## Aula 08 O Terminal
 
 #### links
 
-https://dev.to/shrihari/how-to-test-open-graph-meta-tags-locally--4981
+https://linuxjourney.com/
 
-https://developers.facebook.com/tools/debug/
+https://explainshell.com/
 
-https://www.linkedin.com/post-inspector/
+Comandos principais:
 
-https://favicon.io/
-
-https://developer.mozilla.org/en-US/docs/Web/HTML
-
-https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input
-
-https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table
-
-Link para feedbacks:
-https://dsro75f2mx7.typeform.com/to/qzaTvzhc#codturma=0062_TEC_Grupo Boticário_01
+- `pwd`: Onde estou?
+- `cd <caminho>`: Mudar de diretório. (`..` = pai, `~` = home)
+- `ls [-la]`: Listar conteúdo.
+- `mkdir <nome_pasta>`: Criar pasta.
+- `touch <nome_arquivo>`: Criar arquivo vazio.
+- `cp [-r] <origem> <destino>`: Copiar.
+- `mv <origem> <destino>`: Mover ou Renomear.
+- `rm <arquivo>`: Remover arquivo (PERMANENTE).
+- `rmdir <pasta_vazia>`: Remover pasta vazia (PERMANENTE).
+- `rm -r <pasta>`: Remover pasta e TODO seu conteúdo (MUITO PERIGOSO E PERMANENTE).
