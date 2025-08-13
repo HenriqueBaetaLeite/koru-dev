@@ -2,6 +2,8 @@
 
 #### Cada aula terá seu próprio _extras.md_
 
-https://developer.mozilla.org/en-US/
+## Aula JS Puro Vs React
 
-https://www.w3schools.com/
+https://react.dev/
+
+https://justfuckingusereact.com/
