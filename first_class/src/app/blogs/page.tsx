@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { blogs, blog } from '../data/blogs';
 
-export default async function BlogsPage() {
+export default function BlogsPage() {
   return (
     <main className="p-6">
       <h1 className="text-3xl font-bold mb-6">📚 Lista de Blogs</h1>
