@@ -12,7 +12,7 @@ type Post = {
 
 export async function getPost(slug: string): Promise<Post | undefined> {
   return new Promise((resolve) => setTimeout(() => {
-    const post = posts.find(p => p.slug === slug);
+    const post = posts.find(p => p.id === slug);
     resolve(post);
   } , 2000))
 }
