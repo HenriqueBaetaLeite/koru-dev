@@ -24,7 +24,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <h1>Esse cara aparece sempre!!!!!</h1>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
