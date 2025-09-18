@@ -21,5 +21,5 @@ export async function DELETE(
   const { id } = await params;
 
   deleteTodo(parseInt(id));
-  return NextResponse.json({ success: true });
+  return NextResponse.json({ success: true }, { status: 204 });
 }

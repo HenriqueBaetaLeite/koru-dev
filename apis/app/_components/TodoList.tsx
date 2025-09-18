@@ -15,6 +15,7 @@ export default function TodoList() {
 
   async function fetchTodos() {
     try {
+      setLoading(true);
       const res = await fetch("/api/todos");
       if (!res.ok) throw new Error("Erro ao buscar tarefas");
       const data = await res.json();
@@ -58,7 +59,7 @@ export default function TodoList() {
     <div>
       <TodoForm onAdd={handleAdd} />
 
-      <ul className="space-y-2">
+      <ul className="space-y-4">
         {todos.map((todo) => (
           <li
             key={todo.id}
@@ -70,13 +71,13 @@ export default function TodoList() {
             <div className="flex gap-2">
               <button
                 onClick={() => toggleTodo(todo.id)}
-                className="px-2 py-1 bg-green-500 text-white rounded cursor-pointer"
+                className="px-2 py-1 bg-green-500 text-white rounded cursor-pointer hover:bg-green-600"
               >
                 {todo.completed ? "Desfazer" : "Concluir"}
               </button>
               <button
                 onClick={() => deleteTodo(todo.id)}
-                className="px-2 py-1 bg-red-500 text-white rounded cursor-pointer"
+                className="px-2 py-1 bg-red-500 text-white rounded cursor-pointer hover:bg-red-600"
               >
                 Excluir
               </button>
