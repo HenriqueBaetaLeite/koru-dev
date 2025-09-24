@@ -1,0 +1,35 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Modelo para Posts do blog
+model Post {
+  id        Int       @id @default(autoincrement())
+  title     String
+  content   String
+  author    String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  // Relacionamento com comentários
+  comments  Comment[]
+}
+
+// Modelo para Comentários
+model Comment {
+  id        Int      @id @default(autoincrement())
+  content   String
+  author    String
+  createdAt DateTime @default(now())
+
+  // Relacionamento com post
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId    Int
+}
