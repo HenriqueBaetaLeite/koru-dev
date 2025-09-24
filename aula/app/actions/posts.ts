@@ -8,6 +8,7 @@ import { revalidatePath } from 'next/cache'
 // ===== POSTS =====
 
 // Criar novo post
+// COMPLETAR!!!
 export async function createPost(formData: FormData) {
   try {
     const title = formData.get('title') as string
@@ -28,6 +29,7 @@ export async function createPost(formData: FormData) {
 }
 
 // Buscar todos os posts
+// COMPLETAR!!!
 export async function getPosts() {
   try {
    
@@ -49,6 +51,7 @@ export async function getPostById(id: number) {
 }
 
 // Atualizar post
+// COMPLETAR!!!
 export async function updatePost(id: number, formData: FormData) {
   try {
     const title = formData.get('title') as string
